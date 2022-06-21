@@ -3,14 +3,14 @@ from django.db import models
 
 
 class Stream(models.Model):
-    stream_id = models.IntegerField(primary_key=True, max_length=10)
+    stream_id = models.IntegerField(primary_key=True)
     name = models.CharField(max_length=100, help_text="The name of the Stream")
 
     def __str__(self):
         return self.name
 
 class Classes(models.Model):
-    class_id = models.IntegerField(primary_key=True, max_length=10)
+    class_id = models.IntegerField(primary_key=True)
     stream_id = models.ForeignKey(Stream, on_delete=models.CASCADE)
     name = models.CharField(max_length=255, help_text="The name of the Classes")
     semester = models.CharField(max_length=255)
@@ -18,7 +18,7 @@ class Classes(models.Model):
 
 
 class Student(models.Model):
-    student_id = models.IntegerField(primary_key= True, max_length= 10)
+    student_id = models.IntegerField(primary_key= True)
     class_id = models.ForeignKey(Classes, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50, help_text="The Student's first name or names.")
     last_name = models.CharField(max_length=50, help_text="The Student's last name or names.")
@@ -31,7 +31,7 @@ class Student(models.Model):
         return self.first_name
 
 class Teacher(models.Model):
-    teacher_id = models.IntegerField(primary_key=True, max_length=10)
+    teacher_id = models.IntegerField(primary_key=True)
     stream_id = models.ForeignKey(Stream, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50, help_text="The Teacher's first name or names.")
     last_name = models.CharField(max_length=50, help_text="The Teacher's last name or names.")
@@ -44,7 +44,7 @@ class Teacher(models.Model):
 
 
 class Classroom(models.Model):
-    room_id = models.IntegerField(primary_key=True, max_length=10)
+    room_id = models.IntegerField(primary_key=True)
     teacher_id = models.ForeignKey(Teacher, on_delete=models.CASCADE)
     subject = models.CharField(max_length=255)
     code = models.CharField(max_length=255)
@@ -56,7 +56,7 @@ class Joins(models.Model):
     student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
 
 class Sections(models.Model):
-    section_id = models.IntegerField(primary_key=True, max_length=10)
+    section_id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=100, help_text="The title's resource")
     create_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
     room_id = models.ForeignKey(Classroom, on_delete=models.CASCADE)
@@ -65,11 +65,10 @@ class Sections(models.Model):
         return self.title
 
 class Assignment(models.Model):
-    Assignment_id = models.IntegerField(primary_key=True, max_length=10)
-    file = models.FileField(help_text="The file of assignment", blank=True, upload_to="assignments_files/)
+    Assignment_id = models.IntegerField(primary_key=True)
+    file = models.FileField(help_text="The file of assignment", blank=True, upload_to="assignments_files/")
     create_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
-    deadline_date = models.DateTimeField(null=True, help_text=\
-                     "The date and time the assignment is deadline.")
+    deadline_date = models.DateTimeField(null=True, help_text="The date and time the assignment is deadline.")
     textbox = models.TextField(help_text="The comment of The assignment")
     section_id = models.ForeignKey(Sections, on_delete=models.CASCADE)
     title = models.CharField(max_length=100, help_text="The title's assignment")
@@ -87,7 +86,7 @@ class Submits(models.Model) :
 
 
 class Resources(models.Model) :
-    resource_id= models.IntegerField(primary_key=True, max_length=10)
+    resource_id= models.IntegerField(primary_key=True)
     title = models.CharField(max_length=100, help_text="The title's resource")
     create_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
     textbox = models.TextField(help_text="The comment of The resource")
