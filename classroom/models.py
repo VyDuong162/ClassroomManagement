@@ -1,19 +1,59 @@
 from django.db import models
 
-class Student(models.Model) :
-    student_id= models.IntegerField(primary_key=True,max_length=10)
-   first_name = models.CharField(
-                max_length=50, help_text="The student's first name")
-   last_name = models.CharField(
-                max_length=50, help_text="The student's last name")
-   email = models.EmailField(help_text="The contact email for the student")
-    roll_no = models.IntegerField(help_text="The roll number of the student")
-    username = models.CharField(unique=True,max_length=100, help_text="Username's student")
-    password = models.CharField(max_length=100, help_text="Password's username")
+
+
+class Stream(models.Model):
+    stream_id = models.IntegerField(primary_key=True, max_length=10)
+    name = models.CharField(max_length=100, help_text="The name of the Stream")
+
+    def __str__(self):
+        return self.name
+
+class Classes(models.Model):
+    class_id = models.IntegerField(primary_key=True, max_length=10)
+    stream_id = models.ForeignKey(Stream, on_delete=models.CASCADE)
+    name = models.CharField(max_length=255, help_text="The name of the Classes")
+    semester = models.CharField(max_length=255)
+
+
+
+class Student(models.Model):
+    student_id = models.IntegerField(primary_key= True, max_length= 10)
+    class_id = models.ForeignKey(Classes, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50, help_text="The Student's first name or names.")
+    last_name = models.CharField(max_length=50, help_text="The Student's last name or names.")
+    email = models.EmailField(help_text="The contact email for the student.")
+    roll_no = models.CharField(max_length=50)
+    username = models.CharField(unique=True,max_length=255, help_text="The Student's username.")
+    password = models.CharField(max_length=100, help_text="The Student's password.")
 
     def __str__(self):
         return self.first_name
 
+class Teacher(models.Model):
+    teacher_id = models.IntegerField(primary_key=True, max_length=10)
+    stream_id = models.ForeignKey(Stream, on_delete=models.CASCADE)
+    first_name = models.CharField(max_length=50, help_text="The Teacher's first name or names.")
+    last_name = models.CharField(max_length=50, help_text="The Teacher's last name or names.")
+    email = models.EmailField(help_text="The contact email for the teacher.")
+    username = models.CharField(unique=True,max_length=255, help_text="The Teacher's username.")
+    password = models.CharField(max_length=100, help_text="The Teacher's password.")
+
+    def __str__(self):
+        return self.first_name
+
+
+class Classroom(models.Model):
+    room_id = models.IntegerField(primary_key=True, max_length=10)
+    teacher_id = models.ForeignKey(Teacher, on_delete=models.CASCADE)
+    subject = models.CharField(max_length=255)
+    code = models.CharField(max_length=255)
+    semester = models.CharField(max_length=255)
+    created_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the classroom was created.")
+
+class Joins(models.Model):
+    room_id = models.ForeignKey(Classroom, on_delete=models.CASCADE)
+    student_id = models.ForeignKey(Student, on_delete=models.CASCADE)
 
 class Sections(models.Model):
     section_id = models.IntegerField(primary_key=True, max_length=10)
@@ -23,7 +63,6 @@ class Sections(models.Model):
     
     def __str__(self):
         return self.title
-
 
 class Assignment(models.Model):
     Assignment_id = models.IntegerField(primary_key=True, max_length=10)
@@ -57,3 +96,7 @@ class Resources(models.Model) :
 
     def __str__(self):
         return self.title
+
+
+
+
