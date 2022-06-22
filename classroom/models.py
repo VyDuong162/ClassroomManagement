@@ -64,7 +64,7 @@ class Sections(models.Model):
     def __str__(self):
         return self.title
 
-class Assignment(models.Model):
+class Assignments(models.Model):
     Assignment_id = models.IntegerField(primary_key=True)
     file = models.FileField(help_text="The file of assignment", blank=True, upload_to="assignments_files/")
     create_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
@@ -79,7 +79,7 @@ class Assignment(models.Model):
 
 class Submits(models.Model) :
     student_id = models.ForeignKey (Student, on_delete=models.CASCADE)
-    assignment_id = models.ForeignKey(Assignment, on_delete=models.CASCADE)
+    assignment_id = models.ForeignKey(Assignments, on_delete=models.CASCADE)
     submitted_on = models.SmallIntegerField(help_text="The comment of The resource")
     status = models.SmallIntegerField(help_text="The status of submit has 2 value: 0: yet , 1: done")
     file = models.FileField(help_text="The file of submit",blank=True, upload_to="Submits_files/")
