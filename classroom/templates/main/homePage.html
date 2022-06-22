@@ -1,0 +1,17 @@
+{% extends 'main/base.html' %}
+
+{% block title %}
+HomePage
+{% endblock %}
+
+{% block content %}
+<h1>Home Page</h1>
+<hr>
+<p>
+    Welcome, {{username}}
+</p>
+Wanna sign out?
+<a href="/logout">
+    Click Here
+</a>
+{% endblock %}
