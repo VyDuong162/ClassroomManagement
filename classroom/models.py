@@ -74,16 +74,16 @@ class Joins(models.Model):
 class Sections(models.Model):
     section_id = models.IntegerField(primary_key=True)
     title = models.CharField(max_length=100, help_text="The title's resource")
-    create_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
+    created_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
     room_id = models.ForeignKey(Classroom, on_delete=models.CASCADE)
     
     def __str__(self):
         return self.title
 
 class Assignments(models.Model):
-    Assignment_id = models.IntegerField(primary_key=True)
+    assignment_id = models.IntegerField(primary_key=True)
     file = models.FileField(help_text="The file of assignment", blank=True, upload_to="assignments_files/")
-    create_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
+    created_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
     deadline_date = models.DateTimeField(null=True, help_text="The date and time the assignment is deadline.")
     textbox = models.TextField(help_text="The comment of The assignment")
     section_id = models.ForeignKey(Sections, on_delete=models.CASCADE)
@@ -104,7 +104,7 @@ class Submits(models.Model) :
 class Resources(models.Model) :
     resource_id= models.IntegerField(primary_key=True)
     title = models.CharField(max_length=100, help_text="The title's resource")
-    create_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
+    created_date = models.DateTimeField(auto_now_add=True, help_text="The date and time the resource was created")
     textbox = models.TextField(help_text="The comment of The resource")
     file = models.FileField(help_text="The file of resource")
     section_id = models.ForeignKey(Sections, on_delete=models.CASCADE)

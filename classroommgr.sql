@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 21, 2022 lúc 09:43 AM
+-- Thời gian đã tạo: Th6 23, 2022 lúc 08:35 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.3
 
@@ -86,46 +86,54 @@ INSERT INTO `auth_permission` (`id`, `name`, `content_type_id`, `codename`) VALU
 (22, 'Can change session', 6, 'change_session'),
 (23, 'Can delete session', 6, 'delete_session'),
 (24, 'Can view session', 6, 'view_session'),
-(25, 'Can add joins', 7, 'add_joins'),
-(26, 'Can change joins', 7, 'change_joins'),
-(27, 'Can delete joins', 7, 'delete_joins'),
-(28, 'Can view joins', 7, 'view_joins'),
-(29, 'Can add submits', 8, 'add_submits'),
-(30, 'Can change submits', 8, 'change_submits'),
-(31, 'Can delete submits', 8, 'delete_submits'),
-(32, 'Can view submits', 8, 'view_submits'),
-(33, 'Can add classroom', 9, 'add_classroom'),
-(34, 'Can change classroom', 9, 'change_classroom'),
-(35, 'Can delete classroom', 9, 'delete_classroom'),
-(36, 'Can view classroom', 9, 'view_classroom'),
-(37, 'Can add assignment', 10, 'add_assignment'),
-(38, 'Can change assignment', 10, 'change_assignment'),
-(39, 'Can delete assignment', 10, 'delete_assignment'),
-(40, 'Can view assignment', 10, 'view_assignment'),
-(41, 'Can add sections', 11, 'add_sections'),
-(42, 'Can change sections', 11, 'change_sections'),
-(43, 'Can delete sections', 11, 'delete_sections'),
-(44, 'Can view sections', 11, 'view_sections'),
-(45, 'Can add resources', 12, 'add_resources'),
-(46, 'Can change resources', 12, 'change_resources'),
-(47, 'Can delete resources', 12, 'delete_resources'),
-(48, 'Can view resources', 12, 'view_resources'),
-(49, 'Can add teacher', 13, 'add_teacher'),
-(50, 'Can change teacher', 13, 'change_teacher'),
-(51, 'Can delete teacher', 13, 'delete_teacher'),
-(52, 'Can view teacher', 13, 'view_teacher'),
-(53, 'Can add student', 14, 'add_student'),
-(54, 'Can change student', 14, 'change_student'),
-(55, 'Can delete student', 14, 'delete_student'),
-(56, 'Can view student', 14, 'view_student'),
-(57, 'Can add classes', 15, 'add_classes'),
-(58, 'Can change classes', 15, 'change_classes'),
-(59, 'Can delete classes', 15, 'delete_classes'),
-(60, 'Can view classes', 15, 'view_classes'),
-(61, 'Can add stream', 16, 'add_stream'),
-(62, 'Can change stream', 16, 'change_stream'),
-(63, 'Can delete stream', 16, 'delete_stream'),
-(64, 'Can view stream', 16, 'view_stream');
+(25, 'Can add classes', 7, 'add_classes'),
+(26, 'Can change classes', 7, 'change_classes'),
+(27, 'Can delete classes', 7, 'delete_classes'),
+(28, 'Can view classes', 7, 'view_classes'),
+(29, 'Can add classroom', 8, 'add_classroom'),
+(30, 'Can change classroom', 8, 'change_classroom'),
+(31, 'Can delete classroom', 8, 'delete_classroom'),
+(32, 'Can view classroom', 8, 'view_classroom'),
+(33, 'Can add stream', 9, 'add_stream'),
+(34, 'Can change stream', 9, 'change_stream'),
+(35, 'Can delete stream', 9, 'delete_stream'),
+(36, 'Can view stream', 9, 'view_stream'),
+(37, 'Can add student', 10, 'add_student'),
+(38, 'Can change student', 10, 'change_student'),
+(39, 'Can delete student', 10, 'delete_student'),
+(40, 'Can view student', 10, 'view_student'),
+(41, 'Can add teacher', 11, 'add_teacher'),
+(42, 'Can change teacher', 11, 'change_teacher'),
+(43, 'Can delete teacher', 11, 'delete_teacher'),
+(44, 'Can view teacher', 11, 'view_teacher'),
+(45, 'Can add submits', 12, 'add_submits'),
+(46, 'Can change submits', 12, 'change_submits'),
+(47, 'Can delete submits', 12, 'delete_submits'),
+(48, 'Can view submits', 12, 'view_submits'),
+(49, 'Can add sections', 13, 'add_sections'),
+(50, 'Can change sections', 13, 'change_sections'),
+(51, 'Can delete sections', 13, 'delete_sections'),
+(52, 'Can view sections', 13, 'view_sections'),
+(53, 'Can add resources', 14, 'add_resources'),
+(54, 'Can change resources', 14, 'change_resources'),
+(55, 'Can delete resources', 14, 'delete_resources'),
+(56, 'Can view resources', 14, 'view_resources'),
+(57, 'Can add joins', 15, 'add_joins'),
+(58, 'Can change joins', 15, 'change_joins'),
+(59, 'Can delete joins', 15, 'delete_joins'),
+(60, 'Can view joins', 15, 'view_joins'),
+(61, 'Can add assignments', 16, 'add_assignments'),
+(62, 'Can change assignments', 16, 'change_assignments'),
+(63, 'Can delete assignments', 16, 'delete_assignments'),
+(64, 'Can view assignments', 16, 'view_assignments'),
+(65, 'Can add authentication', 17, 'add_authentication'),
+(66, 'Can change authentication', 17, 'change_authentication'),
+(67, 'Can delete authentication', 17, 'delete_authentication'),
+(68, 'Can view authentication', 17, 'view_authentication'),
+(69, 'Can add user', 18, 'add_user'),
+(70, 'Can change user', 18, 'change_user'),
+(71, 'Can delete user', 18, 'delete_user'),
+(72, 'Can view user', 18, 'view_user');
 
 -- --------------------------------------------------------
 
@@ -174,17 +182,39 @@ CREATE TABLE `auth_user_user_permissions` (
 -- --------------------------------------------------------
 
 --
--- Cấu trúc bảng cho bảng `classroom_assignment`
+-- Cấu trúc bảng cho bảng `classroom_assignments`
 --
 
-CREATE TABLE `classroom_assignment` (
-  `Assignment_id` int(11) NOT NULL,
+CREATE TABLE `classroom_assignments` (
+  `assignment_id` int(11) NOT NULL,
   `file` varchar(100) NOT NULL,
-  `create_date` datetime(6) NOT NULL,
+  `created_date` datetime(6) NOT NULL,
   `deadline_date` datetime(6) DEFAULT NULL,
   `textbox` longtext NOT NULL,
   `title` varchar(100) NOT NULL,
   `section_id_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `classroom_assignments`
+--
+
+INSERT INTO `classroom_assignments` (`assignment_id`, `file`, `created_date`, `deadline_date`, `textbox`, `title`, `section_id_id`) VALUES
+(1, 'Session5.3_Chuliu.pdf', '2022-06-23 06:33:26.588502', '2022-06-27 00:00:00.000000', 'Làm bài tập thuật toán chuliu', 'Nội dung Chương 1: Đại cương về đồ thị', 1),
+(2, 'HW6_Ranking.pdf', '2022-06-23 06:33:26.788576', '2022-06-30 00:00:00.000000', 'Làm bài xếp hạng đồ thị', 'Nội dung bài tập tuần 1: Lập trình biểu diễn đồ thị', 2),
+(3, 'HW3.pdf', '2022-06-23 06:33:26.930898', '2022-06-28 00:00:00.000000', 'Hoàn thành bài tập trong file đính kèm', 'Nội dung Chương 2: Tính liên thông đồ thị', 3),
+(4, 'HW2.pdf', '2022-06-23 06:33:26.967947', '2022-06-28 00:00:00.000000', 'Hoàn thành bài tập viết tay trong file đính kèm', 'Nội dung bài tập tuần 2: Bài tập viết tay - Kiểm tra chu trình và đồ thị phân đôi', 4);
+
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `classroom_authentication`
+--
+
+CREATE TABLE `classroom_authentication` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 -- --------------------------------------------------------
@@ -199,6 +229,16 @@ CREATE TABLE `classroom_classes` (
   `semester` varchar(255) NOT NULL,
   `stream_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `classroom_classes`
+--
+
+INSERT INTO `classroom_classes` (`class_id`, `name`, `semester`, `stream_id_id`) VALUES
+(1, 'Lý thuyết đồ thị nhóm 1', 'HK1 2021-2022', 1),
+(2, 'Lý thuyết đồ thị nhóm 2', 'HK1 2021-2022', 1),
+(3, 'Mạng máy tính', 'HK2 2021-2022', 2),
+(4, 'Cơ sở dữ liệu', 'HK2 2021-2022', 3);
 
 -- --------------------------------------------------------
 
@@ -215,6 +255,16 @@ CREATE TABLE `classroom_classroom` (
   `teacher_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `classroom_classroom`
+--
+
+INSERT INTO `classroom_classroom` (`room_id`, `subject`, `code`, `semester`, `created_date`, `teacher_id_id`) VALUES
+(1, 'CT178 Lý thuyết đồ thị nhóm 1', 'ab178', 'HK1 2021-2022', '2022-06-23 06:33:25.607781', 1),
+(2, 'CT178 Lý thuyết đồ thị nhóm 2', 'ct178', 'HK1 2021-2022', '2022-06-23 06:33:25.648003', 1),
+(3, 'CT112 Mạng máy tính ', '32wzq', 'HK2 2021-2022', '2022-06-23 06:33:25.706703', 2),
+(4, 'CT180 Cơ sở dữ liệu', '165htg', 'HK2 2021-2022', '2022-06-23 06:33:25.723249', 3);
+
 -- --------------------------------------------------------
 
 --
@@ -227,6 +277,20 @@ CREATE TABLE `classroom_joins` (
   `student_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `classroom_joins`
+--
+
+INSERT INTO `classroom_joins` (`id`, `room_id_id`, `student_id_id`) VALUES
+(1, 1, 1),
+(2, 1, 2),
+(3, 1, 3),
+(4, 2, 4),
+(5, 3, 5),
+(6, 3, 6),
+(7, 4, 7),
+(8, 4, 8);
+
 -- --------------------------------------------------------
 
 --
@@ -236,11 +300,21 @@ CREATE TABLE `classroom_joins` (
 CREATE TABLE `classroom_resources` (
   `resource_id` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
-  `create_date` datetime(6) NOT NULL,
+  `created_date` datetime(6) NOT NULL,
   `textbox` longtext NOT NULL,
   `file` varchar(100) NOT NULL,
   `section_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `classroom_resources`
+--
+
+INSERT INTO `classroom_resources` (`resource_id`, `title`, `created_date`, `textbox`, `file`, `section_id_id`) VALUES
+(1, 'Slide bài giảng lý thuyết đồ thị', '2022-06-23 06:33:27.161289', 'Giáo trình học lý thuyết đồ thị trong học kỳ này', 'giaotrinhlythuyetdothi.pdf', 1),
+(2, 'Slide bài giảng lý thuyết đồ thị', '2022-06-23 06:33:27.198218', 'Giáo trình học lý thuyết đồ thị trong học kỳ này', 'giaotrinhlythuyetdothi.pdf', 2),
+(3, 'Giáo trình môn mạng máy tính', '2022-06-23 06:33:27.338501', 'giáo trình mạng máy tính', 'slidemangmaytinh.pdf', 5),
+(4, 'Slide cơ sở dữ liệu', '2022-06-23 06:33:27.365304', 'Giáo trình học cơ sở dữ liệu trong học kỳ này', 'slidecosodulieu.pdf', 7);
 
 -- --------------------------------------------------------
 
@@ -251,9 +325,23 @@ CREATE TABLE `classroom_resources` (
 CREATE TABLE `classroom_sections` (
   `section_id` int(11) NOT NULL,
   `title` varchar(100) NOT NULL,
-  `create_date` datetime(6) NOT NULL,
+  `created_date` datetime(6) NOT NULL,
   `room_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `classroom_sections`
+--
+
+INSERT INTO `classroom_sections` (`section_id`, `title`, `created_date`, `room_id_id`) VALUES
+(1, 'Nội dung Chương 1: Đại cương về đồ thị', '2022-06-23 06:33:26.088386', 1),
+(2, 'Nội dung bài tập tuần 1: Lập trình biểu diễn đồ thị', '2022-06-23 06:33:26.144026', 1),
+(3, 'Nội dung Chương 2: Tính liên thông đồ thị', '2022-06-23 06:33:26.213837', 2),
+(4, 'Nội dung bài tập tuần 2: Bài tập viết tay - Kiểm tra chu trình và đồ thị phân đôi', '2022-06-23 06:33:26.269553', 2),
+(5, 'Ôn tập giữa kì và lịch thi mạng máy tính ', '2022-06-23 06:33:26.281966', 3),
+(6, 'Slide lý thuyết chương 5: Tầng mạng', '2022-06-23 06:33:26.298809', 3),
+(7, 'Bài giảng chương 4 - Ngôn ngữ hỏi SQL', '2022-06-23 06:33:26.354693', 4),
+(8, 'Thực hành bài tập chương 4 ', '2022-06-23 06:33:26.419344', 4);
 
 -- --------------------------------------------------------
 
@@ -265,6 +353,15 @@ CREATE TABLE `classroom_stream` (
   `stream_id` int(11) NOT NULL,
   `name` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `classroom_stream`
+--
+
+INSERT INTO `classroom_stream` (`stream_id`, `name`) VALUES
+(1, 'Ôn tập cuối kỳ Lý thuyết đồ thị'),
+(2, 'Hướng dẫn thực hành Mạng máy tính buổi 2'),
+(3, 'Bài tập SQL');
 
 -- --------------------------------------------------------
 
@@ -283,6 +380,20 @@ CREATE TABLE `classroom_student` (
   `class_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+--
+-- Đang đổ dữ liệu cho bảng `classroom_student`
+--
+
+INSERT INTO `classroom_student` (`student_id`, `first_name`, `last_name`, `email`, `roll_no`, `username`, `password`, `class_id_id`) VALUES
+(1, 'Trần', 'Thanh Trúc', 'tructructhanh03@gmail.com', 'B1812392', 'B1812392', '123456', 1),
+(2, 'Dương', 'Vy', 'vyduong162@gmail.com', 'B1805734', 'B1805734', '789012', 1),
+(3, 'Phạm', 'Vy', 'vypham10272000@gmail.com', 'B1801234', 'B1801234', '123', 1),
+(4, 'Nguyễn', 'Hữu Đăng', 'nguyenhuudang0206@gmail.com', 'B1806001', 'B1806001', '123456', 2),
+(5, 'Nguyễn', 'Hưng', 'quochungst1311@gmail.com', 'B1806002', 'B1806002', '123456', 3),
+(6, 'Nguyễn', 'Linh', 'nguyenvanlinh060700@gmail.com', 'B1806003', 'B1806003', '123456', 3),
+(7, 'Nguyễn', 'Thanh', 'nguyendinhthanh27120@gmail.com', 'B1806004', 'B1806004', '123456', 4),
+(8, 'Vũ', 'Long', 'vngoclong.vnl@gmail.com', 'B1806005', 'B1806005', '123456', 4);
+
 -- --------------------------------------------------------
 
 --
@@ -297,6 +408,15 @@ CREATE TABLE `classroom_submits` (
   `assignment_id_id` int(11) NOT NULL,
   `student_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `classroom_submits`
+--
+
+INSERT INTO `classroom_submits` (`id`, `submitted_on`, `status`, `file`, `assignment_id_id`, `student_id_id`) VALUES
+(1, 1, 1, 'trucchuliu.pdf', 1, 1),
+(2, 1, 1, 'duongvyHW6.pdf', 2, 2),
+(3, 0, 0, '', 3, 4);
 
 -- --------------------------------------------------------
 
@@ -313,6 +433,17 @@ CREATE TABLE `classroom_teacher` (
   `password` varchar(100) NOT NULL,
   `stream_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Đang đổ dữ liệu cho bảng `classroom_teacher`
+--
+
+INSERT INTO `classroom_teacher` (`teacher_id`, `first_name`, `last_name`, `email`, `username`, `password`, `stream_id_id`) VALUES
+(1, 'Võ', 'Trí Thức', 'thuc33@gmail.com', '2112', '2112', 1),
+(2, 'Lâm', 'Nhựt Khang', 'khang123@gmail.com', '2213', '2213', 2),
+(3, 'Trương', 'Quốc Định', 'quocdinh22@gmail.com', '3314', '3314', 3),
+(4, 'Phạm', 'Xuân Hiền', 'phamhien12@gmail.com', '9212', '9212', 1),
+(5, 'Phạm', 'Ngọc Quyền', 'quyen0309@gmail.com', '30913', '30913', 3);
 
 -- --------------------------------------------------------
 
@@ -352,16 +483,18 @@ INSERT INTO `django_content_type` (`id`, `app_label`, `model`) VALUES
 (3, 'auth', 'group'),
 (2, 'auth', 'permission'),
 (4, 'auth', 'user'),
-(10, 'classroom', 'assignment'),
-(15, 'classroom', 'classes'),
-(9, 'classroom', 'classroom'),
-(7, 'classroom', 'joins'),
-(12, 'classroom', 'resources'),
-(11, 'classroom', 'sections'),
-(16, 'classroom', 'stream'),
-(14, 'classroom', 'student'),
-(8, 'classroom', 'submits'),
-(13, 'classroom', 'teacher'),
+(16, 'classroom', 'assignments'),
+(17, 'classroom', 'authentication'),
+(7, 'classroom', 'classes'),
+(8, 'classroom', 'classroom'),
+(15, 'classroom', 'joins'),
+(14, 'classroom', 'resources'),
+(13, 'classroom', 'sections'),
+(9, 'classroom', 'stream'),
+(10, 'classroom', 'student'),
+(12, 'classroom', 'submits'),
+(11, 'classroom', 'teacher'),
+(18, 'classroom', 'user'),
 (5, 'contenttypes', 'contenttype'),
 (6, 'sessions', 'session');
 
@@ -383,25 +516,31 @@ CREATE TABLE `django_migrations` (
 --
 
 INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
-(1, 'contenttypes', '0001_initial', '2022-06-21 05:43:34.815054'),
-(2, 'auth', '0001_initial', '2022-06-21 05:43:37.043091'),
-(3, 'admin', '0001_initial', '2022-06-21 05:43:45.171825'),
-(4, 'admin', '0002_logentry_remove_auto_add', '2022-06-21 05:43:47.594873'),
-(5, 'admin', '0003_logentry_add_action_flag_choices', '2022-06-21 05:43:47.664746'),
-(6, 'contenttypes', '0002_remove_content_type_name', '2022-06-21 05:43:48.903204'),
-(7, 'auth', '0002_alter_permission_name_max_length', '2022-06-21 05:43:50.626650'),
-(8, 'auth', '0003_alter_user_email_max_length', '2022-06-21 05:43:50.827019'),
-(9, 'auth', '0004_alter_user_username_opts', '2022-06-21 05:43:50.875972'),
-(10, 'auth', '0005_alter_user_last_login_null', '2022-06-21 05:43:51.898650'),
-(11, 'auth', '0006_require_contenttypes_0002', '2022-06-21 05:43:51.926492'),
-(12, 'auth', '0007_alter_validators_add_error_messages', '2022-06-21 05:43:51.962711'),
-(13, 'auth', '0008_alter_user_username_max_length', '2022-06-21 05:43:52.142769'),
-(14, 'auth', '0009_alter_user_last_name_max_length', '2022-06-21 05:43:52.335339'),
-(15, 'auth', '0010_alter_group_name_max_length', '2022-06-21 05:43:52.508858'),
-(16, 'auth', '0011_update_proxy_permissions', '2022-06-21 05:43:52.571330'),
-(17, 'auth', '0012_alter_user_first_name_max_length', '2022-06-21 05:43:52.703509'),
-(18, 'sessions', '0001_initial', '2022-06-21 05:43:52.987202'),
-(19, 'classroom', '0001_initial', '2022-06-21 07:35:51.791982');
+(1, 'contenttypes', '0001_initial', '2022-06-23 06:32:34.312374'),
+(2, 'auth', '0001_initial', '2022-06-23 06:32:36.333146'),
+(3, 'admin', '0001_initial', '2022-06-23 06:32:44.442450'),
+(4, 'admin', '0002_logentry_remove_auto_add', '2022-06-23 06:32:46.010945'),
+(5, 'admin', '0003_logentry_add_action_flag_choices', '2022-06-23 06:32:46.078914'),
+(6, 'contenttypes', '0002_remove_content_type_name', '2022-06-23 06:32:46.642135'),
+(7, 'auth', '0002_alter_permission_name_max_length', '2022-06-23 06:32:49.155641'),
+(8, 'auth', '0003_alter_user_email_max_length', '2022-06-23 06:32:49.240776'),
+(9, 'auth', '0004_alter_user_username_opts', '2022-06-23 06:32:49.268803'),
+(10, 'auth', '0005_alter_user_last_login_null', '2022-06-23 06:32:49.785852'),
+(11, 'auth', '0006_require_contenttypes_0002', '2022-06-23 06:32:49.900548'),
+(12, 'auth', '0007_alter_validators_add_error_messages', '2022-06-23 06:32:49.975749'),
+(13, 'auth', '0008_alter_user_username_max_length', '2022-06-23 06:32:50.223410'),
+(14, 'auth', '0009_alter_user_last_name_max_length', '2022-06-23 06:32:50.374800'),
+(15, 'auth', '0010_alter_group_name_max_length', '2022-06-23 06:32:50.550025'),
+(16, 'auth', '0011_update_proxy_permissions', '2022-06-23 06:32:50.627744'),
+(17, 'auth', '0012_alter_user_first_name_max_length', '2022-06-23 06:32:50.747977'),
+(18, 'classroom', '0001_initial', '2022-06-23 06:32:56.510563'),
+(19, 'classroom', '0002_auto_20220622_1602', '2022-06-23 06:33:06.147768'),
+(20, 'classroom', '0003_authentication_user', '2022-06-23 06:33:06.519438'),
+(21, 'classroom', '0004_auto_20220623_1311', '2022-06-23 06:33:07.132117'),
+(22, 'classroom', '0005_auto_20220623_1314', '2022-06-23 06:33:07.197942'),
+(23, 'classroom', '0006_auto_20220623_1322', '2022-06-23 06:33:07.427975'),
+(24, 'classroom', '0007_auto_20220623_1332', '2022-06-23 06:33:07.544388'),
+(25, 'sessions', '0001_initial', '2022-06-23 06:33:07.866999');
 
 -- --------------------------------------------------------
 
@@ -415,9 +554,30 @@ CREATE TABLE `django_session` (
   `expire_date` datetime(6) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
+-- --------------------------------------------------------
+
+--
+-- Cấu trúc bảng cho bảng `temporary_user`
+--
+
+CREATE TABLE `temporary_user` (
+  `id` int(11) NOT NULL,
+  `username` varchar(255) NOT NULL,
+  `email` varchar(255) NOT NULL,
+  `first_name` varchar(255) NOT NULL,
+  `last_name` varchar(255) NOT NULL,
+  `password` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+INSERT INTO `temporary_user` (`id`, `username`, `email`, `first_name`, `last_name`, `password`) VALUES
+(1, 'ThanhNguyen', 'qsczsemko@gmail.com', 'Nguyễn', 'Thanh', 'thanhhe113'),
+(2, 'ThanhNguyen', 'qsczsemko@gmail.com', 'Nguyễn', 'Thanh', 'thanhhe113'),
+(3, 'Thanh', 'qsczsemko@gmail.com', 'Nguyễn', 'Thanh', 'thanhhe113');
+
+
 
 --
 -- Chỉ mục cho bảng `auth_group`
@@ -465,11 +625,17 @@ ALTER TABLE `auth_user_user_permissions`
   ADD KEY `auth_user_user_permi_permission_id_1fbb5f2c_fk_auth_perm` (`permission_id`);
 
 --
--- Chỉ mục cho bảng `classroom_assignment`
+-- Chỉ mục cho bảng `classroom_assignments`
 --
-ALTER TABLE `classroom_assignment`
-  ADD PRIMARY KEY (`Assignment_id`),
+ALTER TABLE `classroom_assignments`
+  ADD PRIMARY KEY (`assignment_id`),
   ADD KEY `classroom_assignment_section_id_id_2db98d88_fk_classroom` (`section_id_id`);
+
+--
+-- Chỉ mục cho bảng `classroom_authentication`
+--
+ALTER TABLE `classroom_authentication`
+  ADD PRIMARY KEY (`id`);
 
 --
 -- Chỉ mục cho bảng `classroom_classes`
@@ -526,8 +692,8 @@ ALTER TABLE `classroom_student`
 --
 ALTER TABLE `classroom_submits`
   ADD PRIMARY KEY (`id`),
-  ADD KEY `classroom_submits_assignment_id_id_3a42f3b7_fk_classroom` (`assignment_id_id`),
-  ADD KEY `classroom_submits_student_id_id_7775c4be_fk_classroom` (`student_id_id`);
+  ADD KEY `classroom_submits_student_id_id_7775c4be_fk_classroom` (`student_id_id`),
+  ADD KEY `classroom_submits_assignment_id_id_3a42f3b7_fk_classroom` (`assignment_id_id`);
 
 --
 -- Chỉ mục cho bảng `classroom_teacher`
@@ -566,6 +732,12 @@ ALTER TABLE `django_session`
   ADD KEY `django_session_expire_date_a5c62663` (`expire_date`);
 
 --
+-- Chỉ mục cho bảng `temporary_user`
+--
+ALTER TABLE `temporary_user`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT cho các bảng đã đổ
 --
 
@@ -585,7 +757,7 @@ ALTER TABLE `auth_group_permissions`
 -- AUTO_INCREMENT cho bảng `auth_permission`
 --
 ALTER TABLE `auth_permission`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=65;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=73;
 
 --
 -- AUTO_INCREMENT cho bảng `auth_user`
@@ -606,16 +778,22 @@ ALTER TABLE `auth_user_user_permissions`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
+-- AUTO_INCREMENT cho bảng `classroom_authentication`
+--
+ALTER TABLE `classroom_authentication`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
 -- AUTO_INCREMENT cho bảng `classroom_joins`
 --
 ALTER TABLE `classroom_joins`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `classroom_submits`
 --
 ALTER TABLE `classroom_submits`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT cho bảng `django_admin_log`
@@ -627,13 +805,19 @@ ALTER TABLE `django_admin_log`
 -- AUTO_INCREMENT cho bảng `django_content_type`
 --
 ALTER TABLE `django_content_type`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
 
 --
 -- AUTO_INCREMENT cho bảng `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+
+--
+-- AUTO_INCREMENT cho bảng `temporary_user`
+--
+ALTER TABLE `temporary_user`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Các ràng buộc cho các bảng đã đổ
@@ -667,9 +851,9 @@ ALTER TABLE `auth_user_user_permissions`
   ADD CONSTRAINT `auth_user_user_permissions_user_id_a95ead1b_fk_auth_user_id` FOREIGN KEY (`user_id`) REFERENCES `auth_user` (`id`);
 
 --
--- Các ràng buộc cho bảng `classroom_assignment`
+-- Các ràng buộc cho bảng `classroom_assignments`
 --
-ALTER TABLE `classroom_assignment`
+ALTER TABLE `classroom_assignments`
   ADD CONSTRAINT `classroom_assignment_section_id_id_2db98d88_fk_classroom` FOREIGN KEY (`section_id_id`) REFERENCES `classroom_sections` (`section_id`);
 
 --
@@ -713,7 +897,7 @@ ALTER TABLE `classroom_student`
 -- Các ràng buộc cho bảng `classroom_submits`
 --
 ALTER TABLE `classroom_submits`
-  ADD CONSTRAINT `classroom_submits_assignment_id_id_3a42f3b7_fk_classroom` FOREIGN KEY (`assignment_id_id`) REFERENCES `classroom_assignment` (`Assignment_id`),
+  ADD CONSTRAINT `classroom_submits_assignment_id_id_3a42f3b7_fk_classroom` FOREIGN KEY (`assignment_id_id`) REFERENCES `classroom_assignments` (`assignment_id`),
   ADD CONSTRAINT `classroom_submits_student_id_id_7775c4be_fk_classroom` FOREIGN KEY (`student_id_id`) REFERENCES `classroom_student` (`student_id`);
 
 --
