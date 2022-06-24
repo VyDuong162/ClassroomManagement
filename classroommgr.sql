@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th6 23, 2022 lúc 08:35 AM
+-- Thời gian đã tạo: Th6 24, 2022 lúc 06:26 AM
 -- Phiên bản máy phục vụ: 10.4.18-MariaDB
 -- Phiên bản PHP: 8.0.3
 
@@ -200,10 +200,10 @@ CREATE TABLE `classroom_assignments` (
 --
 
 INSERT INTO `classroom_assignments` (`assignment_id`, `file`, `created_date`, `deadline_date`, `textbox`, `title`, `section_id_id`) VALUES
-(1, 'Session5.3_Chuliu.pdf', '2022-06-23 06:33:26.588502', '2022-06-27 00:00:00.000000', 'Làm bài tập thuật toán chuliu', 'Nội dung Chương 1: Đại cương về đồ thị', 1),
-(2, 'HW6_Ranking.pdf', '2022-06-23 06:33:26.788576', '2022-06-30 00:00:00.000000', 'Làm bài xếp hạng đồ thị', 'Nội dung bài tập tuần 1: Lập trình biểu diễn đồ thị', 2),
-(3, 'HW3.pdf', '2022-06-23 06:33:26.930898', '2022-06-28 00:00:00.000000', 'Hoàn thành bài tập trong file đính kèm', 'Nội dung Chương 2: Tính liên thông đồ thị', 3),
-(4, 'HW2.pdf', '2022-06-23 06:33:26.967947', '2022-06-28 00:00:00.000000', 'Hoàn thành bài tập viết tay trong file đính kèm', 'Nội dung bài tập tuần 2: Bài tập viết tay - Kiểm tra chu trình và đồ thị phân đôi', 4);
+(1, 'Session5.3_Chuliu.pdf', '2022-06-24 04:25:26.665670', '2022-06-27 00:00:00.000000', 'Làm bài tập thuật toán chuliu', 'Nội dung Chương 1: Đại cương về đồ thị', 1),
+(2, 'HW6_Ranking.pdf', '2022-06-24 04:25:26.799754', '2022-06-30 00:00:00.000000', 'Làm bài xếp hạng đồ thị', 'Nội dung bài tập tuần 1: Lập trình biểu diễn đồ thị', 2),
+(3, 'HW3.pdf', '2022-06-24 04:25:26.896457', '2022-06-28 00:00:00.000000', 'Hoàn thành bài tập trong file đính kèm', 'Nội dung Chương 2: Tính liên thông đồ thị', 3),
+(4, 'HW2.pdf', '2022-06-24 04:25:27.130180', '2022-06-28 00:00:00.000000', 'Hoàn thành bài tập viết tay trong file đính kèm', 'Nội dung bài tập tuần 2: Bài tập viết tay - Kiểm tra chu trình và đồ thị phân đôi', 4);
 
 -- --------------------------------------------------------
 
@@ -260,10 +260,10 @@ CREATE TABLE `classroom_classroom` (
 --
 
 INSERT INTO `classroom_classroom` (`room_id`, `subject`, `code`, `semester`, `created_date`, `teacher_id_id`) VALUES
-(1, 'CT178 Lý thuyết đồ thị nhóm 1', 'ab178', 'HK1 2021-2022', '2022-06-23 06:33:25.607781', 1),
-(2, 'CT178 Lý thuyết đồ thị nhóm 2', 'ct178', 'HK1 2021-2022', '2022-06-23 06:33:25.648003', 1),
-(3, 'CT112 Mạng máy tính ', '32wzq', 'HK2 2021-2022', '2022-06-23 06:33:25.706703', 2),
-(4, 'CT180 Cơ sở dữ liệu', '165htg', 'HK2 2021-2022', '2022-06-23 06:33:25.723249', 3);
+(1, 'CT178 Lý thuyết đồ thị nhóm 1', 'ab178', 'HK1 2021-2022', '2022-06-24 04:25:24.309281', 1),
+(2, 'CT178 Lý thuyết đồ thị nhóm 2', 'ct178', 'HK1 2021-2022', '2022-06-24 04:25:24.387961', 1),
+(3, 'CT112 Mạng máy tính ', '32wzq', 'HK2 2021-2022', '2022-06-24 04:25:24.427603', 2),
+(4, 'CT180 Cơ sở dữ liệu', '165htg', 'HK2 2021-2022', '2022-06-24 04:25:24.649014', 3);
 
 -- --------------------------------------------------------
 
@@ -311,10 +311,10 @@ CREATE TABLE `classroom_resources` (
 --
 
 INSERT INTO `classroom_resources` (`resource_id`, `title`, `created_date`, `textbox`, `file`, `section_id_id`) VALUES
-(1, 'Slide bài giảng lý thuyết đồ thị', '2022-06-23 06:33:27.161289', 'Giáo trình học lý thuyết đồ thị trong học kỳ này', 'giaotrinhlythuyetdothi.pdf', 1),
-(2, 'Slide bài giảng lý thuyết đồ thị', '2022-06-23 06:33:27.198218', 'Giáo trình học lý thuyết đồ thị trong học kỳ này', 'giaotrinhlythuyetdothi.pdf', 2),
-(3, 'Giáo trình môn mạng máy tính', '2022-06-23 06:33:27.338501', 'giáo trình mạng máy tính', 'slidemangmaytinh.pdf', 5),
-(4, 'Slide cơ sở dữ liệu', '2022-06-23 06:33:27.365304', 'Giáo trình học cơ sở dữ liệu trong học kỳ này', 'slidecosodulieu.pdf', 7);
+(1, 'Slide bài giảng lý thuyết đồ thị', '2022-06-24 04:25:27.848274', 'Giáo trình học lý thuyết đồ thị trong học kỳ này', 'giaotrinhlythuyetdothi.pdf', 1),
+(2, 'Slide bài giảng lý thuyết đồ thị', '2022-06-24 04:25:27.960519', 'Giáo trình học lý thuyết đồ thị trong học kỳ này', 'giaotrinhlythuyetdothi.pdf', 2),
+(3, 'Giáo trình môn mạng máy tính', '2022-06-24 04:25:28.165974', 'giáo trình mạng máy tính', 'slidemangmaytinh.pdf', 5),
+(4, 'Slide cơ sở dữ liệu', '2022-06-24 04:25:28.282732', 'Giáo trình học cơ sở dữ liệu trong học kỳ này', 'slidecosodulieu.pdf', 7);
 
 -- --------------------------------------------------------
 
@@ -334,14 +334,14 @@ CREATE TABLE `classroom_sections` (
 --
 
 INSERT INTO `classroom_sections` (`section_id`, `title`, `created_date`, `room_id_id`) VALUES
-(1, 'Nội dung Chương 1: Đại cương về đồ thị', '2022-06-23 06:33:26.088386', 1),
-(2, 'Nội dung bài tập tuần 1: Lập trình biểu diễn đồ thị', '2022-06-23 06:33:26.144026', 1),
-(3, 'Nội dung Chương 2: Tính liên thông đồ thị', '2022-06-23 06:33:26.213837', 2),
-(4, 'Nội dung bài tập tuần 2: Bài tập viết tay - Kiểm tra chu trình và đồ thị phân đôi', '2022-06-23 06:33:26.269553', 2),
-(5, 'Ôn tập giữa kì và lịch thi mạng máy tính ', '2022-06-23 06:33:26.281966', 3),
-(6, 'Slide lý thuyết chương 5: Tầng mạng', '2022-06-23 06:33:26.298809', 3),
-(7, 'Bài giảng chương 4 - Ngôn ngữ hỏi SQL', '2022-06-23 06:33:26.354693', 4),
-(8, 'Thực hành bài tập chương 4 ', '2022-06-23 06:33:26.419344', 4);
+(1, 'Nội dung Chương 1: Đại cương về đồ thị', '2022-06-24 04:25:25.618555', 1),
+(2, 'Nội dung bài tập tuần 1: Lập trình biểu diễn đồ thị', '2022-06-24 04:25:25.873421', 1),
+(3, 'Nội dung Chương 2: Tính liên thông đồ thị', '2022-06-24 04:25:26.248243', 2),
+(4, 'Nội dung bài tập tuần 2: Bài tập viết tay - Kiểm tra chu trình và đồ thị phân đôi', '2022-06-24 04:25:26.301721', 2),
+(5, 'Ôn tập giữa kì và lịch thi mạng máy tính ', '2022-06-24 04:25:26.361038', 3),
+(6, 'Slide lý thuyết chương 5: Tầng mạng', '2022-06-24 04:25:26.407786', 3),
+(7, 'Bài giảng chương 4 - Ngôn ngữ hỏi SQL', '2022-06-24 04:25:26.448951', 4),
+(8, 'Thực hành bài tập chương 4 ', '2022-06-24 04:25:26.518602', 4);
 
 -- --------------------------------------------------------
 
@@ -376,7 +376,6 @@ CREATE TABLE `classroom_student` (
   `email` varchar(254) NOT NULL,
   `roll_no` varchar(50) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(100) NOT NULL,
   `class_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -384,15 +383,15 @@ CREATE TABLE `classroom_student` (
 -- Đang đổ dữ liệu cho bảng `classroom_student`
 --
 
-INSERT INTO `classroom_student` (`student_id`, `first_name`, `last_name`, `email`, `roll_no`, `username`, `password`, `class_id_id`) VALUES
-(1, 'Trần', 'Thanh Trúc', 'tructructhanh03@gmail.com', 'B1812392', 'B1812392', '123456', 1),
-(2, 'Dương', 'Vy', 'vyduong162@gmail.com', 'B1805734', 'B1805734', '789012', 1),
-(3, 'Phạm', 'Vy', 'vypham10272000@gmail.com', 'B1801234', 'B1801234', '123', 1),
-(4, 'Nguyễn', 'Hữu Đăng', 'nguyenhuudang0206@gmail.com', 'B1806001', 'B1806001', '123456', 2),
-(5, 'Nguyễn', 'Hưng', 'quochungst1311@gmail.com', 'B1806002', 'B1806002', '123456', 3),
-(6, 'Nguyễn', 'Linh', 'nguyenvanlinh060700@gmail.com', 'B1806003', 'B1806003', '123456', 3),
-(7, 'Nguyễn', 'Thanh', 'nguyendinhthanh27120@gmail.com', 'B1806004', 'B1806004', '123456', 4),
-(8, 'Vũ', 'Long', 'vngoclong.vnl@gmail.com', 'B1806005', 'B1806005', '123456', 4);
+INSERT INTO `classroom_student` (`student_id`, `first_name`, `last_name`, `email`, `roll_no`, `username`, `class_id_id`) VALUES
+(1, 'Trần', 'Thanh Trúc', 'tructructhanh03@gmail.com', 'B1812392', 'B1812392', 1),
+(2, 'Dương', 'Vy', 'vyduong162@gmail.com', 'B1805734', 'B1805734', 1),
+(3, 'Phạm', 'Vy', 'vypham10272000@gmail.com', 'B1801234', 'B1801234', 1),
+(4, 'Nguyễn', 'Hữu Đăng', 'nguyenhuudang0206@gmail.com', 'B1806001', 'B1806001', 2),
+(5, 'Nguyễn', 'Hưng', 'quochungst1311@gmail.com', 'B1806002', 'B1806002', 3),
+(6, 'Nguyễn', 'Linh', 'nguyenvanlinh060700@gmail.com', 'B1806003', 'B1806003', 3),
+(7, 'Nguyễn', 'Thanh', 'nguyendinhthanh27120@gmail.com', 'B1806004', 'B1806004', 4),
+(8, 'Vũ', 'Long', 'vngoclong.vnl@gmail.com', 'B1806005', 'B1806005', 4);
 
 -- --------------------------------------------------------
 
@@ -430,7 +429,6 @@ CREATE TABLE `classroom_teacher` (
   `last_name` varchar(50) NOT NULL,
   `email` varchar(254) NOT NULL,
   `username` varchar(255) NOT NULL,
-  `password` varchar(100) NOT NULL,
   `stream_id_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
@@ -438,12 +436,12 @@ CREATE TABLE `classroom_teacher` (
 -- Đang đổ dữ liệu cho bảng `classroom_teacher`
 --
 
-INSERT INTO `classroom_teacher` (`teacher_id`, `first_name`, `last_name`, `email`, `username`, `password`, `stream_id_id`) VALUES
-(1, 'Võ', 'Trí Thức', 'thuc33@gmail.com', '2112', '2112', 1),
-(2, 'Lâm', 'Nhựt Khang', 'khang123@gmail.com', '2213', '2213', 2),
-(3, 'Trương', 'Quốc Định', 'quocdinh22@gmail.com', '3314', '3314', 3),
-(4, 'Phạm', 'Xuân Hiền', 'phamhien12@gmail.com', '9212', '9212', 1),
-(5, 'Phạm', 'Ngọc Quyền', 'quyen0309@gmail.com', '30913', '30913', 3);
+INSERT INTO `classroom_teacher` (`teacher_id`, `first_name`, `last_name`, `email`, `username`, `stream_id_id`) VALUES
+(1, 'Võ', 'Trí Thức', 'thuc33@gmail.com', '002112', 1),
+(2, 'Lâm', 'Nhựt Khang', 'khang123@gmail.com', '002213', 2),
+(3, 'Trương', 'Quốc Định', 'quocdinh22@gmail.com', '003314', 3),
+(4, 'Phạm', 'Xuân Hiền', 'phamhien12@gmail.com', '009212', 1),
+(5, 'Phạm', 'Ngọc Quyền', 'quyen0309@gmail.com', '030913', 3);
 
 -- --------------------------------------------------------
 
@@ -516,31 +514,32 @@ CREATE TABLE `django_migrations` (
 --
 
 INSERT INTO `django_migrations` (`id`, `app`, `name`, `applied`) VALUES
-(1, 'contenttypes', '0001_initial', '2022-06-23 06:32:34.312374'),
-(2, 'auth', '0001_initial', '2022-06-23 06:32:36.333146'),
-(3, 'admin', '0001_initial', '2022-06-23 06:32:44.442450'),
-(4, 'admin', '0002_logentry_remove_auto_add', '2022-06-23 06:32:46.010945'),
-(5, 'admin', '0003_logentry_add_action_flag_choices', '2022-06-23 06:32:46.078914'),
-(6, 'contenttypes', '0002_remove_content_type_name', '2022-06-23 06:32:46.642135'),
-(7, 'auth', '0002_alter_permission_name_max_length', '2022-06-23 06:32:49.155641'),
-(8, 'auth', '0003_alter_user_email_max_length', '2022-06-23 06:32:49.240776'),
-(9, 'auth', '0004_alter_user_username_opts', '2022-06-23 06:32:49.268803'),
-(10, 'auth', '0005_alter_user_last_login_null', '2022-06-23 06:32:49.785852'),
-(11, 'auth', '0006_require_contenttypes_0002', '2022-06-23 06:32:49.900548'),
-(12, 'auth', '0007_alter_validators_add_error_messages', '2022-06-23 06:32:49.975749'),
-(13, 'auth', '0008_alter_user_username_max_length', '2022-06-23 06:32:50.223410'),
-(14, 'auth', '0009_alter_user_last_name_max_length', '2022-06-23 06:32:50.374800'),
-(15, 'auth', '0010_alter_group_name_max_length', '2022-06-23 06:32:50.550025'),
-(16, 'auth', '0011_update_proxy_permissions', '2022-06-23 06:32:50.627744'),
-(17, 'auth', '0012_alter_user_first_name_max_length', '2022-06-23 06:32:50.747977'),
-(18, 'classroom', '0001_initial', '2022-06-23 06:32:56.510563'),
-(19, 'classroom', '0002_auto_20220622_1602', '2022-06-23 06:33:06.147768'),
-(20, 'classroom', '0003_authentication_user', '2022-06-23 06:33:06.519438'),
-(21, 'classroom', '0004_auto_20220623_1311', '2022-06-23 06:33:07.132117'),
-(22, 'classroom', '0005_auto_20220623_1314', '2022-06-23 06:33:07.197942'),
-(23, 'classroom', '0006_auto_20220623_1322', '2022-06-23 06:33:07.427975'),
-(24, 'classroom', '0007_auto_20220623_1332', '2022-06-23 06:33:07.544388'),
-(25, 'sessions', '0001_initial', '2022-06-23 06:33:07.866999');
+(1, 'contenttypes', '0001_initial', '2022-06-24 04:23:13.878043'),
+(2, 'auth', '0001_initial', '2022-06-24 04:23:15.550574'),
+(3, 'admin', '0001_initial', '2022-06-24 04:23:23.784344'),
+(4, 'admin', '0002_logentry_remove_auto_add', '2022-06-24 04:23:25.591923'),
+(5, 'admin', '0003_logentry_add_action_flag_choices', '2022-06-24 04:23:25.732458'),
+(6, 'contenttypes', '0002_remove_content_type_name', '2022-06-24 04:23:26.439967'),
+(7, 'auth', '0002_alter_permission_name_max_length', '2022-06-24 04:23:27.596485'),
+(8, 'auth', '0003_alter_user_email_max_length', '2022-06-24 04:23:27.885701'),
+(9, 'auth', '0004_alter_user_username_opts', '2022-06-24 04:23:28.033229'),
+(10, 'auth', '0005_alter_user_last_login_null', '2022-06-24 04:23:29.241657'),
+(11, 'auth', '0006_require_contenttypes_0002', '2022-06-24 04:23:29.307937'),
+(12, 'auth', '0007_alter_validators_add_error_messages', '2022-06-24 04:23:29.390544'),
+(13, 'auth', '0008_alter_user_username_max_length', '2022-06-24 04:23:29.625966'),
+(14, 'auth', '0009_alter_user_last_name_max_length', '2022-06-24 04:23:29.783464'),
+(15, 'auth', '0010_alter_group_name_max_length', '2022-06-24 04:23:30.140850'),
+(16, 'auth', '0011_update_proxy_permissions', '2022-06-24 04:23:30.459207'),
+(17, 'auth', '0012_alter_user_first_name_max_length', '2022-06-24 04:23:31.053618'),
+(18, 'classroom', '0001_initial', '2022-06-24 04:23:39.247601'),
+(19, 'classroom', '0002_auto_20220622_1602', '2022-06-24 04:23:51.762828'),
+(20, 'classroom', '0003_authentication_user', '2022-06-24 04:23:52.415493'),
+(21, 'classroom', '0004_auto_20220623_1311', '2022-06-24 04:23:53.374818'),
+(22, 'classroom', '0005_auto_20220623_1314', '2022-06-24 04:23:53.636112'),
+(23, 'classroom', '0006_auto_20220623_1322', '2022-06-24 04:23:53.792828'),
+(24, 'classroom', '0007_auto_20220623_1332', '2022-06-24 04:23:54.552377'),
+(25, 'classroom', '0008_auto_20220624_1122', '2022-06-24 04:23:54.852644'),
+(26, 'sessions', '0001_initial', '2022-06-24 04:23:55.372904');
 
 -- --------------------------------------------------------
 
@@ -572,11 +571,11 @@ CREATE TABLE `temporary_user` (
 --
 -- Chỉ mục cho các bảng đã đổ
 --
+
 INSERT INTO `temporary_user` (`id`, `username`, `email`, `first_name`, `last_name`, `password`) VALUES
 (1, 'ThanhNguyen', 'qsczsemko@gmail.com', 'Nguyễn', 'Thanh', 'thanhhe113'),
 (2, 'ThanhNguyen', 'qsczsemko@gmail.com', 'Nguyễn', 'Thanh', 'thanhhe113'),
 (3, 'Thanh', 'qsczsemko@gmail.com', 'Nguyễn', 'Thanh', 'thanhhe113');
-
 
 
 --
@@ -811,7 +810,7 @@ ALTER TABLE `django_content_type`
 -- AUTO_INCREMENT cho bảng `django_migrations`
 --
 ALTER TABLE `django_migrations`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=26;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
 
 --
 -- AUTO_INCREMENT cho bảng `temporary_user`

@@ -41,7 +41,6 @@ class Student(models.Model):
     email = models.EmailField(help_text="The contact email for the student.")
     roll_no = models.CharField(max_length=50)
     username = models.CharField(unique=True,max_length=255, help_text="The Student's username.")
-    password = models.CharField(max_length=100, help_text="The Student's password.")
 
     def __str__(self):
         return self.first_name
@@ -53,7 +52,6 @@ class Teacher(models.Model):
     last_name = models.CharField(max_length=50, help_text="The Teacher's last name or names.")
     email = models.EmailField(help_text="The contact email for the teacher.")
     username = models.CharField(unique=True,max_length=255, help_text="The Teacher's username.")
-    password = models.CharField(max_length=100, help_text="The Teacher's password.")
 
     def __str__(self):
         return self.first_name

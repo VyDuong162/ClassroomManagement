@@ -76,8 +76,7 @@ class Command(BaseCommand):
                 last_name=data_dict['last_name'],
                 email=data_dict['email'],
                 roll_no = data_dict['roll_no'],
-                username = data_dict['username'],
-                password = data_dict['password']
+                username = data_dict['username']
             )
 
             if created:
@@ -91,8 +90,7 @@ class Command(BaseCommand):
                 first_name=data_dict['first_name'],
                 last_name=data_dict['last_name'],
                 email=data_dict['email'],
-                username=data_dict['username'],
-                password=data_dict['password']
+                username=data_dict['username']
             )
 
             if created:
