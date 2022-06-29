@@ -1,0 +1,53 @@
+POST /api/join/list-create
+Content-Type: application/json
+Vary: Accept
+detail: Create a join and not check
+
+Request:
+{
+    "room_id": 1,
+    "student_id": 1
+}
+
+
+GET /api/join/list-create
+Content-Type: application/json
+Vary: Accept
+detail: get all join
+
+Respon:
+[
+    {
+        "id": 1,
+        "room_id": 1,
+        "student_id": 1
+    },
+    {
+        "id": 2,
+        "room_id": 2,
+        "student_id": 1
+    },
+    {
+        "id": 3,
+        "room_id": 1,
+        "student_id": 2
+    }
+]
+
+
+PUT /api/join/deatail/<int:pk>/
+Content-Type: application/json
+Vary: Accept
+detail: Update join
+
+Request:
+{
+    "room_id": 1,
+    "student_id": 1
+}
+
+
+DELETE /api/join/deatail/<int:pk>/
+Content-Type: application/json
+Vary: Accept
+detail: delete join of student and classroom

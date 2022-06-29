@@ -1,0 +1,15 @@
+POST /api/student/create
+Content-Type: application/json
+Vary: Accept
+detail: Create a student and not check and hash
+
+json = {
+    "student_id":1,
+    "class_id":1,
+    "first_name":"vu",
+    "last_name":"long",
+    "email":"long.ahihi@gmail.com",
+    "roll_no":"roll_no",
+    "username":"ahihi",
+    "password":"ahihi"
+}

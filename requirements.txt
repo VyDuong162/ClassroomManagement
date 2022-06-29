@@ -1,0 +1,6 @@
+django
+mysqlclient
+djangorestframework
+pygments
+djangorestframework-jsonapi
+djangorestframework

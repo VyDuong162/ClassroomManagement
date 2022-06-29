@@ -1,0 +1,11 @@
+POST /api/classes/create
+Content-Type: application/json
+Vary: Accept
+detail: Create a classes and not check
+
+{
+    "class_id":1,
+    "stream_id":1,
+    "name":"Classes1",
+    "semester":"Classes1"
+}

@@ -1,0 +1,12 @@
+POST /api/class-room/create
+Content-Type: application/json
+Vary: Accept
+detail: Create a classroom and not check
+
+{
+    "room_id":1,
+    "teacher_id":1,
+    "subject":"Math",
+    "code":"CT123",
+    "semester":"20-21-KH1"
+}

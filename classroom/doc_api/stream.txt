@@ -1,0 +1,9 @@
+POST /api/stream/create
+Content-Type: application/json
+Vary: Accept
+detail: Create a stream and not check
+
+{
+    "stream_id":1,
+    "name": "stream1"
+}

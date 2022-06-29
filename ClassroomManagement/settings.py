@@ -38,6 +38,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    #Django Rest
+    'rest_framework',
+    #app
     'classroom',
 ]
 

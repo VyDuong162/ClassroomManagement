@@ -1,0 +1,14 @@
+POST /api/teacher/create
+Content-Type: application/json
+Vary: Accept
+detail: Create a techer and not check and hash
+
+{
+    "teacher_id": 1,
+    "first_name": "Jen",
+    "last_name": "Funny",
+    "email": "funny@gmail.com",
+    "username": "funny",
+    "password": "funny",
+    "stream_id": 1
+}
