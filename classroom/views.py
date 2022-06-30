@@ -1,9 +1,9 @@
 from contextlib import redirect_stderr
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 
 # Create your views here.
 from django.shortcuts import render
-from .models import User, Authentication
+from .models import User, Authentication, Assignments, Sections
 from django.contrib import messages
 
 from django.contrib.auth.decorators import login_required
@@ -11,6 +11,10 @@ from django.contrib.auth.decorators import login_required
 import mysql.connector
 
 from operator import itemgetter
+
+
+
+
 
 # Create your views here.
 
@@ -90,3 +94,6 @@ def UserLogout(request):
     if request.session.get('User_Login'):
         del request.session['User_Login']
     return redirect('/login')
+
+
+
