@@ -1,3 +1,4 @@
+
 # task 3: API CRUD assignments
 from rest_framework import serializers
 from django.http import JsonResponse
@@ -37,4 +38,23 @@ class AssignmentsSerializer(serializers.ModelSerializer):
         assignments = get_object_or_404(Assignments, pk=pk)
         assignments.delete()
         return JsonResponse({'message': 'Delete assignment successful!'})
+
+from rest_framework import serializers
+
+from .models import User
+
+class UserSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password')
+
+class RegisterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = User
+        fields = ('username', 'email', 'password')
+        extra_kwargs = {'password': {'write_only': True}}
+
+class UserLoginSerializer(serializers.Serializer):
+    username = serializers.CharField(required=True)
+    password = serializers.CharField(required=True)
 

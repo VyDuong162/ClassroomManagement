@@ -1,11 +1,16 @@
 from django.db import models
+from django.contrib.auth.models import AbstractBaseUser, UserManager
 
 class User(models.Model):
-    username = models.CharField(max_length=255)
+    objects =  UserManager()
+
+    id = models.AutoField(primary_key=True)
+    username = models.CharField(max_length=255, unique=True)
     email = models.CharField(max_length=255)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     password = models.CharField(max_length=255)
+
     class Meta:
         db_table = 'temporary_user'
 
