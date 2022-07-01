@@ -32,6 +32,7 @@ class StudentListCreateAPIView(ListCreateAPIView):
     def get_queryset(self):
         student=Student.objects.all()
         return student
+    
 class TeacherDetailUpdateAPIView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Teacher.objects.filter()
     model=Teacher
@@ -43,6 +44,7 @@ class TeacherDetailUpdateAPIView(generics.RetrieveUpdateDestroyAPIView):
         if teacher:
             teacher.delete()
             return Response('Delete teacher successful!!',status=status.HTTP_200_OK)
+        
 class TeacherListCreateAPIView(ListCreateAPIView):
     serializer_class=TeacherListSerializer
     def get_queryset(self):
