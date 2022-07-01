@@ -9,7 +9,6 @@ router = DefaultRouter()
 # task 3: API CRUD assignments
 router.register(r'assignments', api_views.AssignmentsViewSet)
 # task 6: API CRUD User Profile
-router = DefaultRouter()
 router.register(r'student-list', StudentListCreateAPIView, basename='student-list')
 router.register(r'student-list', StudentDetailUpdateAPIView, basename="student-list")
 router.register(r'teacher-list', TeacherListCreateAPIView, basename='teacher-list')
