@@ -8,6 +8,12 @@ from rest_framework_simplejwt import views as jwt_views
 router = DefaultRouter()
 # task 3: API CRUD assignments
 router.register(r'assignments', api_views.AssignmentsViewSet)
+# task 6: API CRUD User Profile
+router = DefaultRouter()
+router.register(r'student-list', StudentListCreateAPIView, basename='student-list')
+router.register(r'student-list', StudentDetailUpdateAPIView, basename="student-list")
+router.register(r'teacher-list', TeacherListCreateAPIView, basename='teacher-list')
+router.register(r'teacher-list', TeacherDetailUpdateAPIView, basename="teacher-list")
 
 urlpatterns = [
     # path('', views.home),
@@ -25,6 +31,10 @@ urlpatterns = [
     path('logout/', views.UserLogoutView.as_view(), name='refresh'),
     path('refresh/', views.RefreshAPIView.as_view(), name='refresh'),
     path('api/', include((router.urls, 'api'))),
+    path(r'student/',views.StudentListCreateAPIView.as_view()),
+    path(r'student/<str:username>',views.StudentDetailUpdateAPIView.as_view()),
+    path(r'teacher/',views.TeacherListCreateAPIView.as_view()),
+    path(r'teacher/<str:username>',views.TeacherDetailUpdateAPIView.as_view()),
 
 ]
 
