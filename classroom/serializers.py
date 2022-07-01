@@ -2,7 +2,7 @@
 # task 3: API CRUD assignments
 from rest_framework import serializers
 from django.http import JsonResponse
-from .models import Assignments
+from .models import Assignments,Student,Teacher
 from django.utils import timezone
 from django.shortcuts import get_object_or_404
 
@@ -58,3 +58,17 @@ class UserLoginSerializer(serializers.Serializer):
     username = serializers.CharField(required=True)
     password = serializers.CharField(required=True)
 
+# task 6: API CRUD User Profile
+
+class StudentListSerializer(serializers.ModelSerializer):
+    username=serializers.CharField(default=self.context['request'].user)
+    roll_no=serializers.CharField(default=self.context['request'].user)
+    class Meta:
+        model=Student
+        fields='__all__'
+        
+class TeacherListSerializer(serializers.ModelSerializer):
+    username = serializers.CharField(default=self.context['request'].user)
+    class Meta:
+        model=Teacher
+        fields='__all__'
