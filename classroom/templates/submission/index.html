@@ -1,0 +1,19 @@
+{% extends 'submission/base.html' %}
+
+{% block content %}
+  {% if viewed_submits %}
+  Recently viewed submits:
+  <ul>
+      {% for submit in viewed_submits %}
+      {{submit}}
+      <li><a href="/submit/{{ submit.id }}">
+        {% if submit.file != null %}
+            {{ submit.file }}
+        {% else %}
+
+        {% endif %}
+      </a></li>
+      {% endfor %}
+  </ul>
+  {% endif %}
+{% endblock %}

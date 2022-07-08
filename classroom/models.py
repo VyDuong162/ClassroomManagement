@@ -48,7 +48,7 @@ class Student(models.Model):
     username = models.CharField(unique=True,max_length=255, help_text="The Student's username.")
 
     def __str__(self):
-        return self.first_name
+         return "{} {} ({})".format(self.first_name, self.last_name, self.roll_no)
 
 class Teacher(models.Model):
     teacher_id = models.IntegerField(primary_key=True)

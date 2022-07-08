@@ -29,6 +29,7 @@ def apiOverview(request):
         'Logout': '/logout',
         'Refresh Access Token': '/refresh',
         'User Info': '/userinfo',
+        'submit' :'api/submits'
     }
 
     return Response(api_urls)
@@ -225,4 +226,34 @@ class RefreshAPIView(APIView):
 #     if request.session.get('User_Login'):
 #         del request.session['User_Login']
 #     return redirect('/login')
+# task submission
+from io import BytesIO
 
+from PIL import Image
+from django.contrib import messages
+from django.contrib.auth.decorators import login_required, user_passes_test
+from django.core.exceptions import PermissionDenied
+from django.core.files.images import ImageFile
+from django.shortcuts import render, get_object_or_404, redirect
+from django.utils import timezone
+
+from .forms import SubmitsForm, SubmitsMediaForm
+from .models import Student, Assignments, Submits
+def index(request):
+    viewed_submits = [Submits.objects.get(id = pk) for pk in request.session.get('viewed_submits', [])]
+
+    context = {
+        "viewed_submits": viewed_submits,
+    }
+    return render(request, "submission/index.html", context)
+def submit_list(request):
+    submits = Submits.objects.all()
+    submits_list = []
+    for submit in submits:
+        submits_list.append({"submit": submit})
+
+    context = {
+        "submits_list": submits_list
+    }
+    return render(request, "submission/submit_list.html", context)
+# end submission
