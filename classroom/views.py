@@ -1,3 +1,12 @@
+
+from contextlib import redirect_stderr
+from django.shortcuts import render, redirect, get_object_or_404
+
+# Create your views here.
+from django.shortcuts import render
+from .models import User, Authentication, Assignments, Sections
+from django.contrib import messages
+
 from django.contrib.auth.hashers import make_password
 from django.http import JsonResponse
 from classroom.authentication import create_access_token, create_refresh_token
@@ -10,6 +19,7 @@ from rest_framework import status
 from rest_framework.exceptions import AuthenticationFailed
 from rest_framework.views import APIView
 
+
 from .serializers import RegisterSerializer, UserSerializer, UserLoginSerializer
 from .models import User
 from .authentication import create_access_token, create_refresh_token, decode_access_token, decode_refresh_token
@@ -17,6 +27,10 @@ from .authentication import create_access_token, create_refresh_token, decode_ac
 import mysql.connector
 
 from operator import itemgetter
+
+
+
+
 
 # Create your views here.
 
@@ -257,3 +271,12 @@ def submit_list(request):
     }
     return render(request, "submission/submit_list.html", context)
 # end submission
+
+
+def UserLogout(request):
+    if request.session.get('User_Login'):
+        del request.session['User_Login']
+    return redirect('/login')
+
+
+

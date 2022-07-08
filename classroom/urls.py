@@ -1,6 +1,8 @@
 from django.urls import path, include
 
-from . import views
+
+from . import views, api_views
+from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt import views as jwt_views
 # submission by vy
 from . import  api_views
@@ -9,6 +11,14 @@ from rest_framework.routers import DefaultRouter
 router = DefaultRouter()
 router.register(r'submits', api_views.SubmitsViewSet)
 # end submission
+# task 3: API CRUD assignments
+router.register(r'assignments', api_views.AssignmentsViewSet)
+# task 6: API CRUD User Profile
+router.register(r'student-list', StudentListCreateAPIView, basename='student-list')
+router.register(r'student-list', StudentDetailUpdateAPIView, basename="student-list")
+router.register(r'teacher-list', TeacherListCreateAPIView, basename='teacher-list')
+router.register(r'teacher-list', TeacherDetailUpdateAPIView, basename="teacher-list")
+
 urlpatterns = [
     # path('', views.home),
     # path('home/', views.home, name='home'),
@@ -31,3 +41,13 @@ urlpatterns = [
     # path('submits/<int:pk>/', views.book_detail, name='book_detail'),
     # path('submits/<int:pk>/new/', views.review_edit, name='review_create'),
 ]
+    path('api/', include((router.urls, 'api'))),
+    path(r'student/',views.StudentListCreateAPIView.as_view()),
+    path(r'student/<str:username>',views.StudentDetailUpdateAPIView.as_view()),
+    path(r'teacher/',views.TeacherListCreateAPIView.as_view()),
+    path(r'teacher/<str:username>',views.TeacherDetailUpdateAPIView.as_view()),
+
+]
+
+
+

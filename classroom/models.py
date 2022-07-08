@@ -39,7 +39,7 @@ class Classes(models.Model):
 
 
 class Student(models.Model):
-    student_id = models.IntegerField(primary_key= True)
+    student_id = models.AutoField(primary_key= True)
     class_id = models.ForeignKey(Classes, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50, help_text="The Student's first name or names.")
     last_name = models.CharField(max_length=50, help_text="The Student's last name or names.")
@@ -48,10 +48,12 @@ class Student(models.Model):
     username = models.CharField(unique=True,max_length=255, help_text="The Student's username.")
 
     def __str__(self):
-         return "{} {} ({})".format(self.first_name, self.last_name, self.roll_no)
+        return self.first_name
+    class Meta:
+        db_table="classroom_student"
 
 class Teacher(models.Model):
-    teacher_id = models.IntegerField(primary_key=True)
+    teacher_id = models.AutoField(primary_key=True)
     stream_id = models.ForeignKey(Stream, on_delete=models.CASCADE)
     first_name = models.CharField(max_length=50, help_text="The Teacher's first name or names.")
     last_name = models.CharField(max_length=50, help_text="The Teacher's last name or names.")
@@ -60,7 +62,8 @@ class Teacher(models.Model):
 
     def __str__(self):
         return self.first_name
-
+    class Meta:
+        db_table="classroom_teacher"
 
 class Classroom(models.Model):
     room_id = models.IntegerField(primary_key=True)

@@ -41,9 +41,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'rest_framework',
+    'classroom',
     'classroom.apps.ClassroomConfig',
     'rest_framework',
     'knox',
+
 ]
 
 SIMPLE_JWT = {
