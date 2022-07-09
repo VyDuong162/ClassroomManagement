@@ -4,9 +4,8 @@ from django.urls import path, include
 from . import views, api_views
 from rest_framework.routers import DefaultRouter
 from rest_framework_simplejwt import views as jwt_views
-# submission by vy
+# submission
 from . import  api_views
-from rest_framework.routers import DefaultRouter
 
 router = DefaultRouter()
 router.register(r'submits', api_views.SubmitsViewSet)
@@ -40,14 +39,13 @@ urlpatterns = [
     path('submits/', views.submit_list, name='submit_list'),
     # path('submits/<int:pk>/', views.book_detail, name='book_detail'),
     # path('submits/<int:pk>/new/', views.review_edit, name='review_create'),
-]
     path('api/', include((router.urls, 'api'))),
     path(r'student/',views.StudentListCreateAPIView.as_view()),
     path(r'student/<str:username>',views.StudentDetailUpdateAPIView.as_view()),
     path(r'teacher/',views.TeacherListCreateAPIView.as_view()),
     path(r'teacher/<str:username>',views.TeacherDetailUpdateAPIView.as_view()),
-
 ]
+
 
 
 
